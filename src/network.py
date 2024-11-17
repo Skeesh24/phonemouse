@@ -14,4 +14,5 @@ async def get_state():
                     data = line[len("data:") :].strip()
                     logging.debug(f"Received data: {data}")
                     # Обработка данных по мере их поступления
-                    yield tuple(map(int, data.split(",")))
+                    yield tuple(map(float, data.split(",")))
+
